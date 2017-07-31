@@ -1,0 +1,8 @@
+sudo: required
+language: elixir
+elixir:
+  - 1.3.0
+
+install: ./ci_prepare.sh
+
+script: elixir test.exs

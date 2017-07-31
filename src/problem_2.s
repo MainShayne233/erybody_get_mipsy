@@ -1,8 +1,7 @@
 # add last calculated value to sum
 is_even:
   add.s $f2, $f2, $f1
-  j fib
-
+  j     fib
 
 ##
 # $f0: first incrementing value
@@ -29,29 +28,29 @@ main:
 #
 # call fib again
 fib:
-  add.s $f5, $f0, $f1
-  c.le.s $f3, $f5
-  bc1t end
+  add.s   $f5, $f0, $f1
+  c.le.s  $f3, $f5
+  bc1t    end
 
-  mov.s $f0, $f1
-  mov.s $f1, $f5
+  mov.s   $f0, $f1
+  mov.s   $f1, $f5
 
   cvt.w.s $f5, $f5
-  mfc1 $t1, $f5
-  div $t1, $t0
-  mfhi $t1
-  beq $t1, $zero, is_even
+  mfc1    $t1, $f5
+  div     $t1, $t0
+  mfhi    $t1
+  beq     $t1, $zero, is_even
 
-  j fib
+  j       fib
 
 # print value and exit
 end:
   cvt.w.s $f2, $f2
-  mfc1, $a0, $f2
-  li $v0, 1
+  mfc1,   $a0, $f2
+  li      $v0, 1
   syscall
 
-  li $v0, 10
+  li      $v0, 10
   syscall
 
         .data

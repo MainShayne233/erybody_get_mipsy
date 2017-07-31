@@ -2,6 +2,8 @@
 
 Project Euler solutions written in MIPS assembly language.
 
+[![Build Status](https://travis-ci.org/MainShayne233/erybody_get_mipsy.svg?branch=master)](https://travis-ci.org/MainShayne233/erybody_get_mipsy)
+
 ## Run
 
 Instructions for macOS:
@@ -16,4 +18,12 @@ cd erybody_get_mipsy
 
 # run programs
 spim -f src/problem_1.s
+```
+
+## Test
+
+[Install Elixir](https://elixir-lang.org/install.html)
+
+```bash
+elixir test.exs
 ```
