@@ -1,6 +1,7 @@
 [
   {"problem_1.s", "233168"},
   {"problem_2.s", "4613732"},
+  {"problem_3.s", "6857"},
 ]
 |> Enum.map(fn {file, solution} ->
   with {result, 0} <- System.cmd("spim", ["-f", "src/" <> file]),
